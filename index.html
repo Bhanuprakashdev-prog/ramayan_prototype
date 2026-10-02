@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAMANYAN FARM — Luxury Wedding & Event Destination | Navsari, Gujarat</title>
+  
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="Ramanyan Farm is Gujarat's premier 14-acre royal destination wedding sanctuary. Featuring palatial architecture, grand mandaps, and bespoke hospitality.">
+
+  <!-- Google Fonts: Cormorant Garamond & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- External Libraries: GSAP, ScrollTrigger, Lenis -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+  <!-- Application Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Global Header Navigation: ONLY EXISTING LOGO IMAGE (NO DUPLICATE TEXT) -->
+  <header class="site-header" id="site-header">
+    <a href="index.html" class="header-brand" aria-label="Ramanyan Farm Home">
+      <img src="assets/logo/RAWAYAN Farm Golden Emblem.png" alt="Ramanyan Farm" class="header-logo-img">
+    </a>
+
+    <nav aria-label="Main Navigation">
+      <ul class="nav-links">
+        <li class="nav-item active"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+        <li class="nav-item"><a href="venue.html">Venue</a></li>
+        <li class="nav-item"><a href="events.html">Events</a></li>
+        <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="contact.html" class="btn-gold-pill">Book Now</a>
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Open mobile navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <button class="modal-close-btn" id="mobile-drawer-close" style="top:1.5rem; right:1.5rem;" aria-label="Close navigation">✕</button>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="venue.html">Venue</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="margin-top: 2rem;">
+      <a href="contact.html" class="btn-gold-pill" style="width:100%; justify-content:center;">Book Now</a>
+    </div>
+  </div>
+
+  <!-- MAIN HOME CONTAINER -->
+  <main id="main-content">
+
+    <!-- HOME STACKING CONTAINER (4 Pinned Panels: Hero -> About -> Services -> Venue) -->
+    <div class="home-stack-container" id="home-stack">
+
+      <!-- PANEL 1: HERO SECTION (LEFT TEXT + RIGHT FULL FARM IMAGE WITH SOFT FADE) -->
+      <section class="stacked-panel hero-section" id="hero-panel">
+        <div class="hero-grid">
+          <!-- Left: Editorial Text Content -->
+          <div class="hero-text-col">
+            <div class="hero-badge-label">Luxury Wedding Destination</div>
+            <h1 class="hero-title">
+              <span class="hero-line"><span class="hero-line-text">A Place Where</span></span>
+              <span class="hero-line"><span class="hero-line-text">Dreams Celebrate</span></span>
+            </h1>
+            <p class="hero-subtitle">Where Every Celebration Becomes a Memory</p>
+            <div class="hero-btn-row">
+              <a href="venue.html" class="btn-gold-pill">
+                Explore Our Farm
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <button class="btn-watch-video" data-action="open-video" data-video="assets/videos/Mandap murat dom.mp4">
+                <span class="play-icon-wrap">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+                Watch Video
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Scroll-Controlled Frame-by-Frame 3D/Cinematic Sequence -->
+          <div class="hero-media-col">
+            <div class="hero-img-mask-wrapper">
+              <canvas id="hero-frame-canvas" class="hero-farm-img hero-frame-canvas" aria-label="Ramayan Farm 3D Cinematic Visual"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Minimal Scroll Down Indicator -->
+        <div class="hero-scroll-minimal">
+          <span>Scroll Down</span>
+          <div class="mouse-pill">
+            <div class="mouse-dot"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PANEL 2: ABOUT SECTION PREVIEW (Cream Panel #F5EFE3) -->
+      <section class="stacked-panel about-section" id="about-panel">
+        <div class="curved-divider-top">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0 C150,90 350,-40 500,60 C650,160 900,10 1200,80 L1200,0 L0,0 Z" fill="#101713"></path>
+          </svg>
+        </div>
+
+        <div class="about-container">
+          <div class="about-content-col">
+            <span class="section-tag-gold">ABOUT RAMANYAN FARM</span>
+            <h2 class="about-title">Where Every<br>Celebration Becomes<br>a Memory</h2>
+            <p class="about-desc">
+              Ramanyan Farm is a premier wedding and event destination, designed to transform special moments into unforgettable experiences. Surrounded by nature, elegant architecture, and world-class amenities, we create magical experiences for you and your loved ones.
+            </p>
+            <a href="about.html" class="btn-brown-pill">
+              Learn More
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+
+            <!-- 3 Feature Badges -->
+            <div class="about-features-row">
+              <div class="feature-badge-item">
+                <div class="feature-badge-icon">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M3 21h18M5 21V7l7-4 7 4v14M9 10a2 2 0 100-4 2 2 0 000 4zM15 10a2 2 0 100-4 2 2 0 000 4zM9 16h6"/>
+                  </svg>
+                </div>
+                <div class="feature-badge-title">Luxury Spaces</div>
+                <div class="feature-badge-sub">For Every Occasion</div>
+              </div>
+
+              <div class="feature-badge-item">
+                <div class="feature-badge-icon">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M12 2L9 9l-7 1 5 5-1 7 6-3 6 3-1-7 5-5-7-1z"/>
+                  </svg>
+                </div>
+                <div class="feature-badge-title">Nature Surroundings</div>
+                <div class="feature-badge-sub">14+ Acres Lush Green</div>
+              </div>
+
+              <div class="feature-badge-item">
+                <div class="feature-badge-icon">
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M6 3h12l4 6-10 12L2 9zM2 9h20M12 21L8 9m8 0l-4 12"/>
+                  </svg>
+                </div>
+                <div class="feature-badge-title">Premium Experience</div>
+                <div class="feature-badge-sub">Flawless Hospitality</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-media-col">
+            <div class="about-arch-frame">
+              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85" alt="Ramanyan Farm Estate Courtyard at Dusk" class="about-arch-img">
+            </div>
+          </div>
+        </div>
+
+        <div class="curved-divider-bottom">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0 C300,100 600,-40 900,80 C1050,140 1150,50 1200,90 L1200,120 L0,120 Z" fill="#101713"></path>
+          </svg>
+        </div>
+      </section>
+
+      <!-- PANEL 3: SERVICES SECTION PREVIEW (Dark Panel #101713) -->
+      <section class="stacked-panel services-section" id="services-panel">
+        <div class="services-container">
+          <div class="services-header-row">
+            <div class="services-header-left">
+              <span class="section-tag-gold" style="color:var(--color-warm-gold);">OUR SERVICES</span>
+              <h2 class="services-title">Everything You Need<br>For a Perfect Celebration</h2>
+            </div>
+            <div class="services-header-right">
+              <p class="services-subtext">
+                From royal weddings to corporate galas, we provide complete solutions with world-class facilities and personalized service.
+              </p>
+              <a href="events.html" class="link-gold-arrow">
+                View All Services
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="services-cards-grid">
+            <a href="events.html" class="service-card">
+              <div class="service-card-media">
+                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80" alt="Royal Weddings" class="service-card-img">
+              </div>
+              <div class="service-card-body">
+                <div class="service-card-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <circle cx="8" cy="14" r="5"/><circle cx="16" cy="14" r="5"/><path d="M12 5l1.5 2.5h3L14 9.5l1.5 3-3.5-2-3.5 2 1.5-3-2.5-2h3z"/>
+                  </svg>
+                </div>
+                <h3 class="service-card-title">Weddings</h3>
+                <p class="service-card-desc">Make your big day magical with our palatial mandaps, grand entries, and starlit lawns.</p>
+                <div class="service-card-footer">
+                  <span class="service-card-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            <a href="events.html" class="service-card">
+              <div class="service-card-media">
+                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80" alt="Sangeet & Parties" class="service-card-img">
+              </div>
+              <div class="service-card-body">
+                <div class="service-card-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M9 18V5l12-2v13M9 18a3 3 0 11-6 0 3 3 0 016 0zm12 0a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+                <h3 class="service-card-title">Sangeet & Parties</h3>
+                <p class="service-card-desc">Vibrant spaces for your pre-wedding celebrations, dynamic DJ sound rigs, and musical stages.</p>
+                <div class="service-card-footer">
+                  <span class="service-card-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            <a href="events.html" class="service-card">
+              <div class="service-card-media">
+                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Corporate Events" class="service-card-img">
+              </div>
+              <div class="service-card-body">
+                <div class="service-card-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+                  </svg>
+                </div>
+                <h3 class="service-card-title">Corporate Events</h3>
+                <p class="service-card-desc">Professional galas, annual summits, and leadership retreats in a tranquil open-air setting.</p>
+                <div class="service-card-footer">
+                  <span class="service-card-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            <a href="events.html" class="service-card">
+              <div class="service-card-media">
+                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80" alt="Private Celebrations" class="service-card-img">
+              </div>
+              <div class="service-card-body">
+                <div class="service-card-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M12 2a4 4 0 014 4c0 3-4 7-4 7s-4-4-4-7a4 4 0 014-4zM4 14h16v6H4zM7 14v6M17 14v6"/>
+                  </svg>
+                </div>
+                <h3 class="service-card-title">Private Celebrations</h3>
+                <p class="service-card-desc">Milestone birthdays, golden anniversaries, and bespoke gatherings curated with intimate elegance.</p>
+                <div class="service-card-footer">
+                  <span class="service-card-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- PANEL 4: VENUE SECTION PREVIEW (Cream Panel #FAF7F0) -->
+      <section class="stacked-panel venue-section" id="venue-panel">
+        <div class="curved-divider-top">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0 C200,90 400,-20 600,70 C800,160 1000,20 1200,80 L1200,0 L0,0 Z" fill="#101713"></path>
+          </svg>
+        </div>
+
+        <div class="venue-container">
+          <div class="venue-header-center">
+            <span class="section-tag-gold">EXPLORE THE GROUNDS</span>
+            <h2 class="venue-title">A Venue Surrounded By Nature</h2>
+            <p class="venue-subtext">
+              Experience the perfect blend of luxury and nature. Our expansive green landscapes and elegant architecture create a serene and breathtaking setting for your events.
+            </p>
+          </div>
+
+          <!-- Nature Photo Collage with 14+ Acres badge -->
+          <div class="venue-collage-grid">
+            <div class="collage-item">
+              <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&q=80" alt="Fairy light arched pathway">
+            </div>
+            <div class="collage-item">
+              <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=600&q=80" alt="Royal illuminated walkway">
+            </div>
+            <div class="collage-circle-badge">
+              <strong>14+</strong>
+              <span>Acres of Pure Beauty</span>
+            </div>
+            <div class="collage-item">
+              <img src="https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?auto=format&fit=crop&w=600&q=80" alt="Illuminated Royal Gazebo">
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 3rem;">
+            <a href="venue.html" class="btn-brown-pill">
+              Explore 3D Interactive Venue
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /home-stack-container -->
+
+    <!-- SUBSEQUENT SECTIONS (Flows naturally after stack) -->
+    <div class="subsequent-sections">
+
+      <!-- SECTION 5: STATS & TESTIMONIAL BAR -->
+      <section class="stats-section">
+        <div class="stats-container">
+          <div class="stats-grid">
+            <div class="stat-box">
+              <div class="stat-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L9 9l-7 1 5 5-1 7 6-3 6 3-1-7 5-5-7-1z"/></svg>
+              </div>
+              <div class="stat-number" data-target="14" data-suffix="+">14+</div>
+              <div class="stat-label">Acres of Green Space</div>
+            </div>
+
+            <div class="stat-box">
+              <div class="stat-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              </div>
+              <div class="stat-number" data-target="500" data-suffix="+">500+</div>
+              <div class="stat-label">Happy Families</div>
+            </div>
+
+            <div class="stat-box">
+              <div class="stat-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <div class="stat-number" data-target="100" data-suffix="+">100+</div>
+              <div class="stat-label">Events Every Year</div>
+            </div>
+
+            <div class="stat-box">
+              <div class="stat-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div class="stat-number" data-target="4.9" data-suffix="">4.9</div>
+              <div class="stat-label">Customer Rating</div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="quote-mark">“</div>
+            <p class="testimonial-quote">
+              Ramanyan Farm made our wedding day truly special. The venue, service and ambiance were beyond our expectations.
+            </p>
+            <div class="testimonial-footer">
+              <div class="testimonial-stars">★★★★★</div>
+              <div class="testimonial-author">— Priya & Rohit</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: GALLERY PREVIEW -->
+      <section class="gallery-section" id="gallery-section">
+        <div class="gallery-container">
+          <div class="gallery-header-row">
+            <div>
+              <span class="section-tag-gold">GALLERY</span>
+              <h2 class="gallery-title">Moments That Speak</h2>
+            </div>
+
+            <div class="gallery-filter-tabs">
+              <button class="filter-tab-btn active" data-filter="all">All</button>
+              <button class="filter-tab-btn" data-filter="weddings">Weddings</button>
+              <button class="filter-tab-btn" data-filter="sangeet">Sangeet</button>
+              <button class="filter-tab-btn" data-filter="corporate">Corporate</button>
+              <button class="filter-tab-btn" data-filter="decorations">Decorations</button>
+              <button class="filter-tab-btn" data-filter="venues">Venues</button>
+            </div>
+
+            <a href="gallery.html" class="btn-outline-gold">
+              View Full Gallery
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-card" data-category="venues">
+              <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80" alt="Palatial Courtyard">
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-tag">Venues</span>
+                <h4 class="gallery-card-title">Palatial Twilight Courtyard</h4>
+              </div>
+            </div>
+
+            <div class="gallery-card" data-category="weddings">
+              <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" alt="Royal Mandap">
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-tag">Weddings</span>
+                <h4 class="gallery-card-title">Royal Floral Mandap Canopy</h4>
+              </div>
+            </div>
+
+            <div class="gallery-card" data-category="corporate">
+              <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" alt="Gala Banquet">
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-tag">Corporate</span>
+                <h4 class="gallery-card-title">Starlit Gala Banquet Lawn</h4>
+              </div>
+            </div>
+
+            <div class="gallery-card" data-category="decorations">
+              <img src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=800&q=80" alt="Promenade">
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-tag">Decorations</span>
+                <h4 class="gallery-card-title">Fairy Light Promenade</h4>
+              </div>
+            </div>
+
+            <div class="gallery-card" data-category="venues">
+              <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80" alt="Gazebo">
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-tag">Venues</span>
+                <h4 class="gallery-card-title">Illuminated Heritage Gazebo</h4>
+              </div>
+            </div>
+
+            <div class="gallery-card" data-category="sangeet">
+              <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80" alt="Poolside">
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-tag">Sangeet</span>
+                <h4 class="gallery-card-title">Poolside Celebration Reflection</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 7: FINAL CTA SECTION -->
+      <section class="final-cta-section" id="cta-section">
+        <div class="cta-bg-layer">
+          <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1600&q=85" alt="Ramanyan Farm Estate Panoramic">
+        </div>
+        <div class="cta-container">
+          <div class="cta-left">
+            <span class="section-tag-gold" style="color:var(--color-warm-gold);">LET'S PLAN YOUR EVENT</span>
+            <h2 class="cta-title">Turn Your Special Day<br>Into an Unforgettable Experience</h2>
+            <p class="cta-subtext">
+              Get in touch with us today and let's create beautiful memories together. Schedule your personal estate tour and consultation.
+            </p>
+          </div>
+
+          <div class="booking-floating-card">
+            <h3 class="booking-card-title">Book Your Event Now</h3>
+            <p class="booking-card-sub">Our wedding concierge team will get back to you shortly.</p>
+            <a href="contact.html" class="btn-dark-pill-full">
+              Contact Us
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /subsequent-sections -->
+
+  </main>
+
+  <!-- GLOBAL FOOTER: ONLY LOGO IMAGE (NO DUPLICATE TEXT) -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-main-grid">
+        <div class="footer-brand-col">
+          <img src="assets/logo/RAWAYAN Farm Golden Emblem.png" alt="Ramanyan Farm" class="footer-logo-img">
+          <p class="footer-brand-desc">
+            A Place Where Dreams Celebrate. Gujarat's premier 14-acre royal destination wedding sanctuary.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="venue.html">The Venue</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Our Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="events.html">Royal Weddings</a></li>
+            <li><a href="events.html">Sangeet & Parties</a></li>
+            <li><a href="events.html">Corporate Events</a></li>
+            <li><a href="events.html">Private Celebrations</a></li>
+            <li><a href="events.html">Catering & Dining</a></li>
+            <li><a href="events.html">Decor & Lighting</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact Us</h4>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A52" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Ramanyan Farm, Piplod Faliya, Gauri-Vachpada Link Road, Ta-Khergam, Dist-Navsari, Pin-396040</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A52" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            <a href="tel:+919824773000">+91 9824773000</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A52" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:info@ramayanfarm.com">info@ramayanfarm.com</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Follow Us</h4>
+          <div class="footer-social-row">
+            <a href="https://www.instagram.com/ramayan_farm/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.facebook.com/RamayanFarm/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/watch?v=h-ca7ZGSnoU" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+            <a href="https://wa.me/919824773000" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 Ramanyan Farm. All Rights Reserved.</div>
+        <div class="footer-legal-links">
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Video Modal -->
+  <div class="luxury-modal-backdrop" id="video-modal" role="dialog" aria-modal="true">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="video-modal-close" aria-label="Close video">✕</button>
+      <div class="video-modal-body">
+        <video id="modal-video-player" controls preload="metadata" playsinline></video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Lightbox Modal -->
+  <div class="luxury-modal-backdrop" id="lightbox-modal" role="dialog" aria-modal="true">
+    <button class="modal-close-btn" id="lightbox-close" style="top:2rem; right:2rem; width:44px; height:44px;" aria-label="Close lightbox">✕</button>
+    <div class="lightbox-content">
+      <button class="lightbox-nav-btn prev" id="lightbox-prev" aria-label="Previous image">‹</button>
+      <img id="lightbox-img" class="lightbox-img" src="" alt="Gallery Preview">
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+      <button class="lightbox-nav-btn next" id="lightbox-next" aria-label="Next image">›</button>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Quick Button -->
+  <a href="https://wa.me/919824773000" target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn" aria-label="Chat directly on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+  </a>
+
+  <!-- Application Scripts -->
+  <script src="js/hero-frame-sequence.js"></script>
+  <script src="js/stacking.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

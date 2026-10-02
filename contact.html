@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Inquiries — RAMANYAN FARM | Luxury Destination</title>
+  
+  <meta name="description" content="Connect with Ramanyan Farm, Gujarat's premier luxury wedding destination in Navsari. Schedule a private site visit or reserve your wedding dates today.">
+
+  <!-- Google Fonts: Cormorant Garamond & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- External Libraries: GSAP, Lenis -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+  <!-- Application Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Global Header Navigation: ONLY EXISTING LOGO IMAGE -->
+  <header class="site-header" id="site-header">
+    <a href="index.html" class="header-brand" aria-label="Ramanyan Farm Home">
+      <img src="assets/logo/RAWAYAN Farm Golden Emblem.png" alt="Ramanyan Farm" class="header-logo-img">
+    </a>
+
+    <nav aria-label="Main Navigation">
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+        <li class="nav-item"><a href="venue.html">Venue</a></li>
+        <li class="nav-item"><a href="events.html">Events</a></li>
+        <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+        <li class="nav-item active"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="contact.html" class="btn-gold-pill">Book Now</a>
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Open mobile navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <button class="modal-close-btn" id="mobile-drawer-close" style="top:1.5rem; right:1.5rem;" aria-label="Close navigation">✕</button>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="venue.html">Venue</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="margin-top: 2rem;">
+      <a href="contact.html" class="btn-gold-pill" style="width:100%; justify-content:center;">Book Now</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Dedicated Contact Hero Header -->
+    <section class="dedicated-page-header">
+      <span class="section-tag-gold" style="color:var(--color-warm-gold);">CONNECT WITH US</span>
+      <h1 class="page-header-title">Plan Your Royal Celebration</h1>
+      <p class="page-header-desc">
+        We would be honored to host your once-in-a-lifetime celebration. Reach out to our hospitality team to schedule a personalized estate walkthrough or inquire about seasonal dates.
+      </p>
+    </section>
+
+    <!-- Contact Grid & Interactive Form Section -->
+    <section class="contact-section">
+      <div class="contact-container">
+        
+        <!-- Left: Contact Details & Channels -->
+        <div class="contact-info-panel">
+          
+          <div class="contact-channel-card">
+            <div class="channel-header">
+              <div class="channel-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <h2 class="channel-title" style="margin:0;">The Estate Address</h2>
+            </div>
+            <p class="channel-detail">
+              <strong>Ramanyan Farm</strong><br>
+              Piplod Faliya, Gauri-Vachpada Link Road,<br>
+              Ta-Khergam, Dist-Navsari, Gujarat – 396040
+            </p>
+          </div>
+
+          <div class="contact-channel-card">
+            <div class="channel-header">
+              <div class="channel-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <h2 class="channel-title" style="margin:0;">Phone & Concierge</h2>
+            </div>
+            <p class="channel-detail">
+              Direct Inquiries: <a href="tel:+919824773000">+91 9824773000</a><br>
+              Hours: Mon – Sun, 9:00 AM – 9:00 PM IST
+            </p>
+          </div>
+
+          <div class="contact-channel-card">
+            <div class="channel-header">
+              <div class="channel-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              </div>
+              <h2 class="channel-title" style="margin:0;">Instant WhatsApp</h2>
+            </div>
+            <p class="channel-detail">
+              Chat directly with our event manager:<br>
+              <a href="https://wa.me/919824773000" target="_blank" rel="noopener noreferrer">+91 9824773000 (Click to Chat)</a>
+            </p>
+          </div>
+
+          <div class="contact-channel-card">
+            <div class="channel-header">
+              <div class="channel-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              </div>
+              <h2 class="channel-title" style="margin:0;">Official Social Media</h2>
+            </div>
+            <p class="channel-detail" style="display:flex; flex-direction:column; gap:0.5rem;">
+              <span><strong>Facebook:</strong> <a href="https://www.facebook.com/RamayanFarm/" target="_blank" rel="noopener noreferrer">facebook.com/RamayanFarm</a></span>
+              <span><strong>Instagram:</strong> <a href="https://www.instagram.com/ramayan_farm/" target="_blank" rel="noopener noreferrer">@ramayan_farm</a></span>
+              <span><strong>YouTube:</strong> <a href="https://www.youtube.com/watch?v=h-ca7ZGSnoU" target="_blank" rel="noopener noreferrer">Ramanyan Farm Official Channel</a></span>
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Right: Official Inquiry Form -->
+        <div class="contact-form-panel">
+          <span class="section-tag-gold" style="color:var(--color-warm-gold);">ONLINE RESERVATION</span>
+          <h2 class="contact-form-title">Send An Inquiry</h2>
+          <p class="contact-form-subtitle">Fill in your celebration details below and our senior event consultant will contact you within 24 hours.</p>
+
+          <form id="estate-inquiry-form" class="contact-form" onsubmit="handleInquirySubmit(event)">
+            
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="user-name" class="form-label">Full Name *</label>
+                <input type="text" id="user-name" name="name" class="form-input" placeholder="e.g. Rajesh Shah" required>
+              </div>
+              <div class="form-group">
+                <label for="user-phone" class="form-label">Phone Number *</label>
+                <input type="tel" id="user-phone" name="phone" class="form-input" placeholder="+91 98765 43210" required>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="user-email" class="form-label">Email Address *</label>
+                <input type="email" id="user-email" name="email" class="form-input" placeholder="name@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="event-type" class="form-label">Event Type *</label>
+                <select id="event-type" name="eventType" class="form-select" required>
+                  <option value="" disabled selected>Select Celebration Type</option>
+                  <option value="Royal Wedding">Royal Destination Wedding</option>
+                  <option value="Sangeet & Cocktail">Sangeet & Cocktail Night</option>
+                  <option value="Ring Ceremony & Engagement">Ring Ceremony & Engagement</option>
+                  <option value="Corporate Retreat">Corporate Leadership Retreat</option>
+                  <option value="Private Anniversary">Private Anniversary / Milestone</option>
+                  <option value="Other">Other Bespoke Event</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="event-date" class="form-label">Estimated Event Date</label>
+                <input type="date" id="event-date" name="eventDate" class="form-input">
+              </div>
+              <div class="form-group">
+                <label for="guest-count" class="form-label">Approximate Guests</label>
+                <select id="guest-count" name="guests" class="form-select">
+                  <option value="100 - 300">100 – 300 Guests</option>
+                  <option value="300 - 600" selected>300 – 600 Guests</option>
+                  <option value="600 - 1000">600 – 1,000 Guests</option>
+                  <option value="1000+">1,000+ Guests</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="user-message" class="form-label">Your Vision / Message</label>
+              <textarea id="user-message" name="message" class="form-textarea" placeholder="Tell us about your celebration, required days, catering preferences, or any custom wishes..."></textarea>
+            </div>
+
+            <button type="submit" class="form-submit-btn" id="inquiry-submit-btn">
+              <span>Send Enquiry</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+
+            <div id="form-feedback-msg" style="display:none; padding:1rem; border-radius:8px; font-size:0.95rem; text-align:center; margin-top:1rem;"></div>
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Location & Directions Bar -->
+    <section style="background:var(--color-cream); color:var(--color-deep-forest); padding: 5rem 3.5rem;">
+      <div style="max-width:1300px; margin:0 auto; display:grid; grid-template-columns: repeat(3, 1fr); gap:2.5rem;">
+        
+        <div style="background:var(--color-warm-ivory); border-radius:18px; padding:2.2rem; border:1px solid rgba(48,38,27,0.08); box-shadow:0 10px 30px rgba(48,38,27,0.05);">
+          <div style="font-family:var(--font-serif); font-size:1.4rem; font-weight:600; color:var(--color-deep-forest); margin-bottom:0.75rem;">From Surat Airport</div>
+          <p style="font-size:0.92rem; color:#4a463f; line-height:1.65;">
+            Approximately 75 minutes via NH-48. Seamless highway connectivity with private chauffeur or airport escort options available upon request.
+          </p>
+        </div>
+
+        <div style="background:var(--color-warm-ivory); border-radius:18px; padding:2.2rem; border:1px solid rgba(48,38,27,0.08); box-shadow:0 10px 30px rgba(48,38,27,0.05);">
+          <div style="font-family:var(--font-serif); font-size:1.4rem; font-weight:600; color:var(--color-deep-forest); margin-bottom:0.75rem;">From Navsari Railway Station</div>
+          <p style="font-size:0.92rem; color:#4a463f; line-height:1.65;">
+            Located 30 minutes from Navsari central railway station. Well-paved access road through peaceful green countryside straight to the grand entrance.
+          </p>
+        </div>
+
+        <div style="background:var(--color-warm-ivory); border-radius:18px; padding:2.2rem; border:1px solid rgba(48,38,27,0.08); box-shadow:0 10px 30px rgba(48,38,27,0.05);">
+          <div style="font-family:var(--font-serif); font-size:1.4rem; font-weight:600; color:var(--color-deep-forest); margin-bottom:0.75rem;">Private Site Walkthroughs</div>
+          <p style="font-size:0.92rem; color:#4a463f; line-height:1.65;">
+            Site visits are hosted daily by prior appointment. Our venue director personally guides families across the 14-acre grounds, lawns, and villas.
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- GLOBAL FOOTER: ONLY LOGO IMAGE -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-main-grid">
+        <div class="footer-brand-col">
+          <img src="assets/logo/RAWAYAN Farm Golden Emblem.png" alt="Ramanyan Farm" class="footer-logo-img">
+          <p class="footer-brand-desc">
+            A Place Where Dreams Celebrate. Gujarat's premier 14-acre royal destination wedding sanctuary.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="venue.html">The Venue</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Our Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="events.html">Royal Weddings</a></li>
+            <li><a href="events.html">Sangeet & Parties</a></li>
+            <li><a href="events.html">Corporate Events</a></li>
+            <li><a href="events.html">Private Celebrations</a></li>
+            <li><a href="events.html">Catering & Dining</a></li>
+            <li><a href="events.html">Decor & Lighting</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact Us</h4>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A52" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Ramanyan Farm, Piplod Faliya, Gauri-Vachpada Link Road, Ta-Khergam, Dist-Navsari, Pin-396040</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A52" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            <a href="tel:+919824773000">+91 9824773000</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A52" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:info@ramayanfarm.com">info@ramayanfarm.com</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Follow Us</h4>
+          <div class="footer-social-row">
+            <a href="https://www.instagram.com/ramayan_farm/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.facebook.com/RamayanFarm/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/watch?v=h-ca7ZGSnoU" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+            <a href="https://wa.me/919824773000" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 Ramanyan Farm. All Rights Reserved.</div>
+        <div class="footer-legal-links">
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/919824773000" target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn" aria-label="Chat directly on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+  </a>
+
+  <!-- Script for form submission handling -->
+  <script>
+    function handleInquirySubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('user-name').value;
+      const phone = document.getElementById('user-phone').value;
+      const email = document.getElementById('user-email').value;
+      const eventType = document.getElementById('event-type').value;
+      const eventDate = document.getElementById('event-date').value || 'To be decided';
+      const guests = document.getElementById('guest-count').value;
+      const message = document.getElementById('user-message').value;
+
+      const submitBtn = document.getElementById('inquiry-submit-btn');
+      const feedback = document.getElementById('form-feedback-msg');
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Processing...</span>';
+
+      setTimeout(() => {
+        // Construct WhatsApp link with formatted text
+        const waText = encodeURIComponent(
+          `*New Inquiry for Ramanyan Farm*\n\n` +
+          `*Name:* ${name}\n` +
+          `*Phone:* ${phone}\n` +
+          `*Email:* ${email}\n` +
+          `*Event:* ${eventType}\n` +
+          `*Date:* ${eventDate}\n` +
+          `*Guests:* ${guests}\n` +
+          `*Notes:* ${message || 'None'}`
+        );
+        const waUrl = `https://wa.me/919824773000?text=${waText}`;
+
+        feedback.style.display = 'block';
+        feedback.style.background = 'rgba(201, 154, 82, 0.15)';
+        feedback.style.border = '1px solid var(--color-warm-gold)';
+        feedback.style.color = 'var(--color-warm-ivory)';
+        feedback.innerHTML = `
+          <strong>Thank you, ${name}!</strong><br>
+          Your inquiry has been recorded. Our team will contact you shortly.<br>
+          <a href="${waUrl}" target="_blank" rel="noopener noreferrer" style="color:var(--color-warm-gold); font-weight:600; text-decoration:underline; display:inline-block; margin-top:0.5rem;">
+            Click here to also send this directly via WhatsApp ➔
+          </a>
+        `;
+        if (typeof gsap !== 'undefined') {
+          gsap.fromTo(feedback, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' });
+        }
+        submitBtn.innerHTML = '<span>Enquiry Sent ✓</span>';
+      }, 600);
+    }
+  </script>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

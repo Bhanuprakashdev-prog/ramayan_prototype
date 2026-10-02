@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events & Celebrations — RAMANYAN FARM | Luxury Destination</title>
+  
+  <meta name="description" content="Explore event possibilities at Ramanyan Farm. Royal weddings, sangeet & cocktail parties, corporate retreats, and private celebrations in Gujarat.">
+
+  <!-- Google Fonts: Cormorant Garamond & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- External Libraries: GSAP, ScrollTrigger, Lenis -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+  <!-- Application Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Global Header Navigation: ONLY EXISTING LOGO IMAGE -->
+  <header class="site-header" id="site-header">
+    <a href="index.html" class="header-brand" aria-label="Ramanyan Farm Home">
+      <img src="assets/logo/RAWAYAN Farm Golden Emblem.png" alt="Ramanyan Farm" class="header-logo-img">
+    </a>
+
+    <nav aria-label="Main Navigation">
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+        <li class="nav-item"><a href="venue.html">Venue</a></li>
+        <li class="nav-item active"><a href="events.html">Events</a></li>
+        <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="contact.html" class="btn-gold-pill">Book Now</a>
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Open mobile navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <button class="modal-close-btn" id="mobile-drawer-close" style="top:1.5rem; right:1.5rem;" aria-label="Close navigation">✕</button>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="venue.html">Venue</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="margin-top: 2rem;">
+      <a href="contact.html" class="btn-gold-pill" style="width:100%; justify-content:center;">Book Now</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Events Header -->
+    <section class="dedicated-page-header">
+      <span class="section-tag-gold" style="color:var(--color-warm-gold);">CURATED EXPERIENCES</span>
+      <h1 class="page-header-title">Celebrations at Ramanyan Farm</h1>
+      <p class="page-header-desc">
+        From multi-day royal Indian wedding galas to exclusive leadership summits, our 14-acre estate provides the premier backdrop for unforgettable gatherings.
+      </p>
+    </section>
+
+    <!-- Detailed 4 Event Types Showcase -->
+    <section style="background:var(--color-cream); color:var(--color-deep-forest); padding: 7rem 3.5rem;">
+      <div style="max-width:1300px; margin:0 auto; display:flex; flex-direction:column; gap:5rem;">
+
+        <!-- 1. Royal Weddings -->
+        <div class="event-showcase-row" style="grid-template-columns:1.15fr 1fr;">
+          <div class="event-media-wrap">
+            <img src="assets/farm-map/wedding-lawn/Golden Indian Wedding Mandap at Night.png" alt="Royal Wedding Mandap" class="event-media-img">
+          </div>
+          <div class="event-content-wrap">
+            <span class="section-tag-gold">EVENT 01</span>
+            <h2 style="font-size:2.8rem; line-height:1.15; color:var(--color-deep-forest); margin-bottom:1rem;">Royal Destination Weddings</h2>
+            <p style="font-size:1.05rem; line-height:1.75; color:#4a463f; margin-bottom:1.5rem;">
+              Transform your vows into an imperial affair. Our wedding package includes complete estate privacy, illuminated royal mandap on the lawn, custom procession pathways for baraat entries, sound engineering, and dedicated luxury bridal green rooms.
+            </p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; font-size:0.95rem; color:#4a463f; margin-bottom:2rem;">
+              <li>✓ Capacity: Up to 2,500 Guests</li>
+              <li>✓ Multi-Day Buyouts with Dedicated Event Concierge</li>
+              <li>✓ Permanent Mandap with Architectural Lighting</li>
+            </ul>
+            <a href="contact.html" class="btn-brown-pill">Inquire for Wedding</a>
+          </div>
+        </div>
+
+        <!-- 2. Sangeet & Parties -->
+        <div class="event-showcase-row" style="grid-template-columns:1fr 1.15fr;">
+          <div class="event-content-wrap">
+            <span class="section-tag-gold">EVENT 02</span>
+            <h2 style="font-size:2.8rem; line-height:1.15; color:var(--color-deep-forest); margin-bottom:1rem;">Sangeet & Cocktail Nights</h2>
+            <p style="font-size:1.05rem; line-height:1.75; color:#4a463f; margin-bottom:1.5rem;">
+              Set the night ablaze around our illuminated waterfront pool. With concert-grade lighting trusses, elevated performance staging, and expansive dance floor areas, your pre-wedding musical night will be unforgettable.
+            </p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; font-size:0.95rem; color:#4a463f; margin-bottom:2rem;">
+              <li>✓ Capacity: 800+ Guests</li>
+              <li>✓ Integrated Concert Sound & Moving Head Lighting</li>
+              <li>✓ Waterfront Floating Stage Options</li>
+            </ul>
+            <a href="contact.html" class="btn-brown-pill">Inquire for Sangeet</a>
+          </div>
+          <div class="event-media-wrap">
+            <img src="assets/farm-map/sangeet-ground/02_Sangeet_Main_Stage_Enhanced.png" alt="Sangeet Night" class="event-media-img">
+          </div>
+        </div>
+
+        <!-- 3. Corporate Galas & Summits -->
+        <div class="event-showcase-row" style="grid-template-columns:1.15fr 1fr;">
+          <div class="event-media-wrap">
+            <img src="assets/farm-map/dining-area/04_Wedding_Lawn_Canopy_Enhanced.png" alt="Corporate Gala" class="event-media-img">
+          </div>
+          <div class="event-content-wrap">
+            <span class="section-tag-gold">EVENT 03</span>
+            <h2 style="font-size:2.8rem; line-height:1.15; color:var(--color-deep-forest); margin-bottom:1rem;">Corporate Galas & Leadership Summits</h2>
+            <p style="font-size:1.05rem; line-height:1.75; color:#4a463f; margin-bottom:1.5rem;">
+              Elevate your corporate brand with an executive gala or annual awards dinner held amidst lush natural surroundings. We offer high-bandwidth connectivity, presentation audio-visual setups, and five-star banquet dining.
+            </p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; font-size:0.95rem; color:#4a463f; margin-bottom:2rem;">
+              <li>✓ Seated Gala Dinners up to 1,200 Attendees</li>
+              <li>✓ Full Audio-Visual Rig & Breakout Gazebos</li>
+              <li>✓ High-Security Gated Access & Valet Parking</li>
+            </ul>
+            <a href="contact.html" class="btn-brown-pill">Inquire for Corporate</a>
+          </div>
+        </div>
+
+        <!-- 4. Private Celebrations -->
+        <div class="event-showcase-row" style="grid-template-columns:1fr 1.15fr;">
+          <div class="event-content-wrap">
+            <span class="section-tag-gold">EVENT 04</span>
+            <h2 style="font-size:2.8rem; line-height:1.15; color:var(--color-deep-forest); margin-bottom:1rem;">Milestone Anniversaries & Private Parties</h2>
+            <p style="font-size:1.05rem; line-height:1.75; color:#4a463f; margin-bottom:1.5rem;">
+              Celebrate landmark birthdays, golden anniversaries, and family reunions with curated culinary menus, ambient acoustic music under lit gazebos, and bespoke floral decor.
+            </p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; font-size:0.95rem; color:#4a463f; margin-bottom:2rem;">
+              <li>✓ Intimate Gatherings from 100 to 500 Guests</li>
+              <li>✓ Custom Thematic Lighting & Ambient Decor</li>
+              <li>✓ Personalized Live Catering Plazas</li>
+            </ul>
+            <a href="contact.html" class="btn-brown-pill">Inquire for Celebrations</a>
+          </div>
+          <div class="event-media-wrap">
+            <img src="assets/farm-map/celebration-space/03_Sangeet_Aerial_Overview_Enhanced.png" alt="Private Celebrations" class="event-media-img">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="final-cta-section">
+      <div class="cta-bg-layer">
+        <img src="assets/farm-map/aerial/06_Venue_Aerial_Wide_Enhanced.png" alt="Ramanyan Farm Estate">
+      </div>
+      <div class="cta-container">
+        <div class="cta-left">
+          <span class="section-tag-gold" style="color:var(--color-warm-gold);">LET'S CELEBRATE TOGETHER</span>
+          <h2 class="cta-title">Turn Your Vision Into Reality</h2>
+          <p class="cta-subtext">Contact our hospitality directors to customize your event package and reserve your dates.</p>
+        </div>
+        <div class="booking-floating-card">
+          <h3 class="booking-card-title">Check Date Availability</h3>
+          <p class="booking-card-sub">Get a customized proposal within 24 hours.</p>
+          <a href="contact.html" class="btn-dark-pill-full">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- GLOBAL FOOTER: ONLY LOGO IMAGE -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-main-grid">
+        <div class="footer-brand-col">
+          <img src="assets/logo/RAWAYAN Farm Golden Emblem.png" alt="Ramanyan Farm" class="footer-logo-img">
+          <p class="footer-brand-desc">
+            A Place Where Dreams Celebrate. Gujarat's premier 14-acre royal destination wedding sanctuary.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="venue.html">The Venue</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Our Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="events.html">Royal Weddings</a></li>
+            <li><a href="events.html">Sangeet & Parties</a></li>
+            <li><a href="events.html">Corporate Events</a></li>
+            <li><a href="events.html">Private Celebrations</a></li>
+            <li><a href="events.html">Catering & Dining</a></li>
+            <li><a href="events.html">Decor & Lighting</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact Us</h4>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A52" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Ramanyan Farm, Piplod Faliya, Gauri-Vachpada Link Road, Ta-Khergam, Dist-Navsari, Pin-396040</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A52" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            <a href="tel:+919824773000">+91 9824773000</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A52" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:info@ramayanfarm.com">info@ramayanfarm.com</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Follow Us</h4>
+          <div class="footer-social-row">
+            <a href="https://www.instagram.com/ramayan_farm/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.facebook.com/RamayanFarm/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/watch?v=h-ca7ZGSnoU" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+            <a href="https://wa.me/919824773000" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 Ramanyan Farm. All Rights Reserved.</div>
+        <div class="footer-legal-links">
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919824773000" target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn" aria-label="Chat directly on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+  </a>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Venue & 3D Explorer — RAMANYAN FARM | Luxury Destination</title>
+  
+  <meta name="description" content="Explore Ramanyan Farm's 14+ acres of luxury wedding grounds in 3D. Palatial mandap lawn, royal courtyards, banquet canopy, and celebration pool.">
+
+  <!-- Google Fonts: Cormorant Garamond & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- External Libraries: GSAP, ScrollTrigger, Three.js, OrbitControls, Lenis -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+  <!-- Application Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Global Header Navigation: ONLY EXISTING LOGO IMAGE -->
+  <header class="site-header" id="site-header">
+    <a href="index.html" class="header-brand" aria-label="Ramanyan Farm Home">
+      <img src="assets/logo/RAWAYAN Farm Golden Emblem.png" alt="Ramanyan Farm" class="header-logo-img">
+    </a>
+
+    <nav aria-label="Main Navigation">
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+        <li class="nav-item active"><a href="venue.html">Venue</a></li>
+        <li class="nav-item"><a href="events.html">Events</a></li>
+        <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="contact.html" class="btn-gold-pill">Book Now</a>
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Open mobile navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <button class="modal-close-btn" id="mobile-drawer-close" style="top:1.5rem; right:1.5rem;" aria-label="Close navigation">✕</button>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="venue.html">Venue</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="margin-top: 2rem;">
+      <a href="contact.html" class="btn-gold-pill" style="width:100%; justify-content:center;">Book Now</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Dedicated Page Header with Minimal Content -->
+    <section class="dedicated-page-header">
+      <span class="section-tag-gold" style="color:var(--color-warm-gold);">SANCTUARY OF ELEGANCE</span>
+      <h1 class="page-header-title">A Place Made For Your Moments</h1>
+      <p class="page-header-desc">
+        "Where every celebration becomes unforgettable."
+      </p>
+    </section>
+
+    <!-- 3D Signature Wedding Mandap Showcase -->
+    <section class="mandap-showcase-section" id="mandap-showcase-section">
+      <div class="mandap-showcase-container">
+        
+        <div class="mandap-3d-wrapper" id="mandap-3d-wrapper">
+          <div id="mandap-canvas-container" class="mandap-webgl-canvas"></div>
+
+          <!-- Subtle Top Architectural Experience Badge -->
+          <div class="mandap-badge-overlay">
+            <span class="mandap-badge-dot"></span>
+            <span>Signature Wedding Mandap • 3D Experience</span>
+          </div>
+
+          <!-- Floating Bottom HUD: Lighting Atmosphere & View Moments CTA -->
+          <div class="mandap-hud-bar">
+            <!-- Lighting Mode Selector -->
+            <div class="mandap-lighting-modes" id="mandap-lighting-modes">
+              <span class="lighting-mode-label">Atmosphere:</span>
+              <button class="lighting-pill-btn" data-mode="day">Daylight</button>
+              <button class="lighting-pill-btn" data-mode="golden">Golden Hour</button>
+              <button class="lighting-pill-btn active" data-mode="night">Night Wedding</button>
+            </div>
+
+            <!-- Small Elegant View Real Moments Action -->
+            <div class="mandap-actions-row">
+              <button class="btn-view-moments" id="btn-view-moments" type="button">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                VIEW REAL MOMENTS
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Detailed Spaces Breakdown (100% Local Authentic Assets) -->
+    <section style="background:var(--color-cream); color:var(--color-deep-forest); padding: 7rem 3.5rem;">
+      <div style="max-width:1300px; margin:0 auto; display:flex; flex-direction:column; gap:5rem;">
+        
+        <!-- Space 1: Royal Mandap Lawn -->
+        <div class="venue-space-row">
+          <div class="venue-space-media">
+            <img src="assets/farm-map/wedding-lawn/Golden Indian Wedding Mandap at Night.png" alt="Royal Mandap Lawn" class="venue-space-img">
+          </div>
+          <div class="venue-space-content">
+            <span class="section-tag-gold">SPACE 01</span>
+            <h2 style="font-size:2.8rem; line-height:1.15; color:var(--color-deep-forest); margin-bottom:1rem;">The Royal Mandap & Central Lawn</h2>
+            <p style="font-size:1.05rem; line-height:1.75; color:#4a463f; margin-bottom:1.5rem;">
+              The undisputed crown jewel of Ramanyan Farm. Features our permanently erected, intricately carved mandap with gold-leaf domes, crystal chandeliers, and elevated plinth. Can comfortably accommodate over 1,500 seated guests under starlit skies.
+            </p>
+            <div style="display:flex; gap:2.5rem; font-size:0.95rem; font-weight:600; color:var(--color-muted-olive); margin-bottom:2rem;">
+              <div>Capacity: 2,500+ Guests</div>
+              <div>Area: 25,000 sq. ft.</div>
+            </div>
+            <a href="contact.html" class="btn-brown-pill">Inquire for Weddings</a>
+          </div>
+        </div>
+
+        <!-- Space 2: Sangeet Ground & Celebration Stage -->
+        <div class="venue-space-row reverse">
+          <div class="venue-space-content">
+            <span class="section-tag-gold">SPACE 02</span>
+            <h2 style="font-size:2.8rem; line-height:1.15; color:var(--color-deep-forest); margin-bottom:1rem;">Sangeet Ground & Celebration Arena</h2>
+            <p style="font-size:1.05rem; line-height:1.75; color:#4a463f; margin-bottom:1.5rem;">
+              Designed specifically for high-octane Sangeet nights, sundowner cocktail parties, and musical fireworks shows. The sprawling arena features concert-grade moving head lighting, elevated staging, and amphitheatre viewing.
+            </p>
+            <div style="display:flex; gap:2.5rem; font-size:0.95rem; font-weight:600; color:var(--color-muted-olive); margin-bottom:2rem;">
+              <div>Capacity: 1,000+ Guests</div>
+              <div>Setting: Concert Stage & Dance Plaza</div>
+            </div>
+            <a href="contact.html" class="btn-brown-pill">Inquire for Sangeet</a>
+          </div>
+          <div class="venue-space-media">
+            <img src="assets/farm-map/sangeet-ground/02_Sangeet_Main_Stage_Enhanced.png" alt="Sangeet Ground Main Stage" class="venue-space-img">
+          </div>
+        </div>
+
+        <!-- Space 3: Royal Dining Pavilion -->
+        <div class="venue-space-row">
+          <div class="venue-space-media">
+            <img src="assets/farm-map/dining-area/04_Wedding_Lawn_Canopy_Enhanced.png" alt="Dining Pavilion and Canopy" class="venue-space-img">
+          </div>
+          <div class="venue-space-content">
+            <span class="section-tag-gold">SPACE 03</span>
+            <h2 style="font-size:2.8rem; line-height:1.15; color:var(--color-deep-forest); margin-bottom:1rem;">Royal Banquet Dining Pavilion</h2>
+            <p style="font-size:1.05rem; line-height:1.75; color:#4a463f; margin-bottom:1.5rem;">
+              An expansive culinary haven equipped with industrial 5-star catering kitchens, covered dining canopies, live counter plazas, and banquet seating for 1,200 guests simultaneously.
+            </p>
+            <div style="display:flex; gap:2.5rem; font-size:0.95rem; font-weight:600; color:var(--color-muted-olive); margin-bottom:2rem;">
+              <div>Capacity: 1,200 Dining Covers</div>
+              <div>Catering: Full Kitchen Ready</div>
+            </div>
+            <a href="contact.html" class="btn-brown-pill">Book Event Space</a>
+          </div>
+        </div>
+
+        <!-- Space 4: Main Palace & Grand Royal Entrance -->
+        <div class="venue-space-row reverse">
+          <div class="venue-space-content">
+            <span class="section-tag-gold">SPACE 04</span>
+            <h2 style="font-size:2.8rem; line-height:1.15; color:var(--color-deep-forest); margin-bottom:1rem;">The Main Palace & Grand Royal Entrance</h2>
+            <p style="font-size:1.05rem; line-height:1.75; color:#4a463f; margin-bottom:1.5rem;">
+              A magnificent heritage sandstone facade with royal chhatris, illuminated fountains, and a palatial arrival portico designed for memorable baraat processions and VIP receptions.
+            </p>
+            <div style="display:flex; gap:2.5rem; font-size:0.95rem; font-weight:600; color:var(--color-muted-olive); margin-bottom:2rem;">
+              <div>Arrival: Grand Red Carpet Portico</div>
+              <div>Setting: Royal Heritage Courtyard</div>
+            </div>
+            <a href="contact.html" class="btn-brown-pill">Inquire Palace Venue</a>
+          </div>
+          <div class="venue-space-media">
+            <img src="assets/farm-map/main-venue/01_Hero_Palace_Entrance_Enhanced.jpg" alt="Main Palace Entrance" class="venue-space-img">
+          </div>
+        </div>
+
+        <!-- Space 5: Aerial Overview & Parking -->
+        <div class="venue-space-row">
+          <div class="venue-space-media">
+            <img src="assets/farm-map/aerial/05_Venue_Aerial_Night_Enhanced.png" alt="Estate Aerial Overview at Night" class="venue-space-img">
+          </div>
+          <div class="venue-space-content">
+            <span class="section-tag-gold">SPACE 05</span>
+            <h2 style="font-size:2.8rem; line-height:1.15; color:var(--color-deep-forest); margin-bottom:1rem;">14-Acre Estate & Parking Infrastructure</h2>
+            <p style="font-size:1.05rem; line-height:1.75; color:#4a463f; margin-bottom:1.5rem;">
+              Complete privacy with an illuminated 14-acre perimeter, wide paved roadways, security checkpoints, and dedicated parking for 1,000+ vehicles with organized valet bays for flawless arrival and departure.
+            </p>
+            <div style="display:flex; gap:2.5rem; font-size:0.95rem; font-weight:600; color:var(--color-muted-olive); margin-bottom:2rem;">
+              <div>Parking: 1,000+ Vehicles with Valet</div>
+              <div>Security: 24/7 Gated Access</div>
+            </div>
+            <a href="contact.html" class="btn-brown-pill">Schedule Site Visit</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="final-cta-section">
+      <div class="cta-bg-layer">
+        <img src="assets/farm-map/aerial/06_Venue_Aerial_Wide_Enhanced.png" alt="Ramanyan Farm Estate Aerial Wide">
+      </div>
+      <div class="cta-container">
+        <div class="cta-left">
+          <span class="section-tag-gold" style="color:var(--color-warm-gold);">BOOK YOUR ESTATE VISIT</span>
+          <h2 class="cta-title">See the Magic in Person</h2>
+          <p class="cta-subtext">Schedule a personalized walkthrough of all 7 event spaces with our venue directors.</p>
+        </div>
+        <div class="booking-floating-card">
+          <h3 class="booking-card-title">Schedule a Tour</h3>
+          <p class="booking-card-sub">Reserve your preferred wedding date early.</p>
+          <a href="contact.html" class="btn-dark-pill-full">Inquire Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- GLOBAL FOOTER: ONLY LOGO IMAGE -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-main-grid">
+        <div class="footer-brand-col">
+          <img src="assets/logo/RAWAYAN Farm Golden Emblem.png" alt="Ramanyan Farm" class="footer-logo-img">
+          <p class="footer-brand-desc">
+            A Place Where Dreams Celebrate. Gujarat's premier 14-acre royal destination wedding sanctuary.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="venue.html">The Venue</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Our Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="events.html">Royal Weddings</a></li>
+            <li><a href="events.html">Sangeet & Parties</a></li>
+            <li><a href="events.html">Corporate Events</a></li>
+            <li><a href="events.html">Private Celebrations</a></li>
+            <li><a href="events.html">Catering & Dining</a></li>
+            <li><a href="events.html">Decor & Lighting</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact Us</h4>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A52" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Ramanyan Farm, Piplod Faliya, Gauri-Vachpada Link Road, Ta-Khergam, Dist-Navsari, Pin-396040</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A52" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            <a href="tel:+919824773000">+91 9824773000</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C99A52" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:info@ramayanfarm.com">info@ramayanfarm.com</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Follow Us</h4>
+          <div class="footer-social-row">
+            <a href="https://www.instagram.com/ramayan_farm/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.facebook.com/RamayanFarm/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/watch?v=h-ca7ZGSnoU" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+            <a href="https://wa.me/919824773000" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>© 2026 Ramanyan Farm. All Rights Reserved.</div>
+        <div class="footer-legal-links">
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919824773000" target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn" aria-label="Chat directly on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+  </a>
+
+  <!-- Gallery Lightbox Modal for Venue Exploration -->
+  <div class="luxury-modal-backdrop" id="lightbox-modal" role="dialog" aria-modal="true">
+    <button class="modal-close-btn" id="lightbox-close" style="top:2rem; right:2rem; width:44px; height:44px;" aria-label="Close lightbox">✕</button>
+    <div class="lightbox-content">
+      <button class="lightbox-nav-btn prev" id="lightbox-prev" aria-label="Previous image">‹</button>
+      <img id="lightbox-img" class="lightbox-img" src="" alt="Venue Space High-Resolution Preview">
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+      <button class="lightbox-nav-btn next" id="lightbox-next" aria-label="Next image">›</button>
+    </div>
+  </div>
+
+  <!-- Application and Signature 3D Mandap Controllers -->
+  <script src="js/app.js"></script>
+  <script src="js/three-mandap.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize Signature 3D Wedding Mandap Experience
+      if (typeof SignatureMandap3D !== 'undefined') {
+        const mandap3D = new SignatureMandap3D('mandap-canvas-container');
+        window.mandap3D = mandap3D;
+      }
+    });
+  </script>
+</body>
+</html>
